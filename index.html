@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+const password = prompt("クラスコードを入力してください");
+if (password !== "hokuto2026") {
+  document.documentElement.innerHTML = "<head><meta charset='UTF-8'><title>アクセスできません</title></head><body style='font-family:sans-serif;padding:2rem;'><h2>アクセスできません</h2></body>";
+}
+</script>
+
+<title>超頻出語句クイズ（No.401-500）</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page">
+  <section class="screen" id="menuScreen">
+    <div class="card hero">
+      <p class="eyebrow">Vocabulary Quiz</p>
+      <h1>超頻出語句クイズ（No.401-500）</h1>
+      <p class="lead">開始番号と終了番号を指定して、順番通りまたはランダムで出題できます。</p>
+
+      <div class="form-grid">
+        <label>
+          <span>開始番号</span>
+          <input type="number" id="startNumber" min="401" max="500" value="401">
+        </label>
+        <label>
+          <span>終了番号</span>
+          <input type="number" id="endNumber" min="401" max="500" value="500">
+        </label>
+      </div>
+
+      <div class="mode-group" aria-label="出題順">
+        <button class="mode-btn active" data-mode="order" type="button">順番通り</button>
+        <button class="mode-btn" data-mode="random" type="button">ランダム</button>
+      </div>
+
+      <div class="actions">
+        <button class="primary-btn" id="startBtn" type="button">スタート</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="screen hidden" id="quizScreen">
+    <div class="card quiz-card">
+      <div class="quiz-top">
+        <div class="progress-wrap">
+          <div class="progress-meta">
+            <span id="progressText">1 / 1</span>
+            <span id="scoreText">正解 0</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+        <button class="ghost-btn" id="menuBtnTop" type="button">メニューに戻る</button>
+      </div>
+
+      <div class="word-row">
+        <h2 id="wordText">word</h2>
+        <button class="sound-btn" id="speakBtn" type="button" aria-label="音声再生">🔊</button>
+      </div>
+
+      <div class="choice-list" id="choiceList"></div>
+
+      <div class="feedback hidden" id="feedbackBox"></div>
+
+      <div class="nav-row">
+        <button class="ghost-btn" id="prevBtn" type="button">前へ</button>
+        <button class="ghost-btn" id="nextBtn" type="button">次へ</button>
+      </div>
+
+      <div class="bottom-actions">
+        <button class="secondary-btn" id="restartBtn" type="button">同条件で再スタート</button>
+        <button class="secondary-btn" id="retryBtn" type="button">別範囲でやり直し</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="screen hidden" id="resultScreen">
+    <div class="card result-card">
+      <p class="eyebrow">Finished</p>
+      <h2>全問終了</h2>
+      <p class="result-score" id="finalScore">0 / 0</p>
+      <p class="lead" id="finalMessage">おつかれさまでした。</p>
+      <div class="bottom-actions">
+        <button class="primary-btn" id="restartBtnResult" type="button">同条件で再スタート</button>
+        <button class="secondary-btn" id="retryBtnResult" type="button">別範囲でやり直し</button>
+        <button class="ghost-btn" id="menuBtnResult" type="button">メニューに戻る</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="footer-note">
+  本教材は授業内利用を目的とした補助教材です。<br>
+  市販教材を参考にしていますが、例文・表現は独自に作成しています。
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
