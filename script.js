@@ -265,4 +265,7 @@ menuBackButtons.forEach((button) => {
 showScreen(menuScreen);
 setMode("ordered");
 
+
+// 初期表示を明示
+showScreen("menu");
 }
