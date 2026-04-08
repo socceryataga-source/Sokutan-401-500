@@ -1,3 +1,6 @@
+if (!window.__authOK) {
+  // 誤入力・空欄・キャンセル時はクイズ初期化を行わない
+} else {
 const state = {
   mode: "order",
   filtered: [],
@@ -227,4 +230,6 @@ function escapeHtml(str) {
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;");
+}
+
 }
