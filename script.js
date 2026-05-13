@@ -48,7 +48,7 @@ const state = {
 
 function showScreen(target) {
   [menuScreen, quizScreen, resultScreen].forEach((screen) => {
-    screen.classList.toggle("active", screen === target);
+    screen.classList.toggle("hidden", screen !== target);
   });
 }
 
@@ -267,5 +267,3 @@ setMode("ordered");
 
 
 // 初期表示を明示
-showScreen("menu");
-}
