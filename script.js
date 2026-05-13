@@ -16,12 +16,8 @@ const scoreText = document.getElementById("scoreText");
 const wordText = document.getElementById("wordText");
 const wordNoText = document.getElementById("wordNoText");
 const speakBtn = document.getElementById("speakBtn");
-const choicesWrap = document.getElementById("choicesWrap");
-const feedbackPanel = document.getElementById("feedbackPanel");
-const resultBadge = document.getElementById("resultBadge");
-const correctAnswerText = document.getElementById("correctAnswerText");
-const exampleText = document.getElementById("exampleText");
-const translationText = document.getElementById("translationText");
+const choicesWrap = document.getElementById("choiceList");
+const feedbackPanel = document.getElementById("feedbackBox");
 
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
@@ -34,8 +30,7 @@ const menuBackButtons = [
 ];
 const restartSameResultBtn = document.getElementById("restartSameResultBtn");
 const restartNewResultBtn = document.getElementById("restartNewResultBtn");
-const finalScoreText = document.getElementById("finalScoreText");
-const finalRateText = document.getElementById("finalRateText");
+const finalScoreText = document.getElementById("finalScore");
 
 const state = {
   start: QUIZ_META.min,
