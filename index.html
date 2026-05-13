@@ -44,12 +44,12 @@ if (!window.__authOK) {
       </div>
 
       <div class="mode-group" aria-label="出題順">
-<button class="mode-btn active" id="orderedBtn" data-mode="order" type="button">順番通り</button>
-<button class="mode-btn" id="randomBtn" data-mode="random" type="button">ランダム</button>
+        <button class="mode-btn active" id="orderedBtn" data-mode="ordered" type="button">順番通り</button>
+        <button class="mode-btn" id="randomBtn" data-mode="random" type="button">ランダム</button>
       </div>
 
       <div class="actions">
-<button class="primary-btn" id="startQuizBtn" type="button">スタート</button>
+        <button class="primary-btn" id="startQuizBtn" type="button">スタート</button>
       </div>
     </div>
   </section>
@@ -60,7 +60,7 @@ if (!window.__authOK) {
         <div class="progress-wrap">
           <div class="progress-meta">
             <span id="progressText">1 / 1</span>
-            <span id="scoreText">正解 0</span>
+            <span id="scoreText">正解 0 / 0</span>
           </div>
           <div class="progress-bar">
             <div class="progress-fill" id="progressFill"></div>
@@ -69,6 +69,7 @@ if (!window.__authOK) {
         <button class="ghost-btn" id="menuBtnTop" type="button">メニューに戻る</button>
       </div>
 
+      <p class="eyebrow" id="wordNoText">単語番号: 401</p>
       <div class="word-row">
         <h2 id="wordText">word</h2>
         <button class="sound-btn" id="speakBtn" type="button" aria-label="音声再生">🔊</button>

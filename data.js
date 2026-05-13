@@ -1,4 +1,7 @@
-const data = [
+// Vocabulary data for No.401-500
+// id: 通し番号 / correct: 正答の選択肢インデックス（0始まり）
+window.QUIZ_META = { min: 401, max: 500, title: "超頻出語句クイズ（No.401-500）" };
+window.WORD_DATA = [
   {
     "id": 401,
     "word": "regard",

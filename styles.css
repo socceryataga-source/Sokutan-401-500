@@ -291,3 +291,6 @@ button:active{ transform: translateY(1px); }
   #wordText{ font-size: 1.7rem; }
   .sound-btn{ width: 100%; height: auto; }
 }
+
+button:disabled{ opacity: 0.55; cursor: not-allowed; }
+#wordNoText{ margin-bottom: 6px; }
